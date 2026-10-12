@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Vistas.Taboga.Solicitud.ActivitySolicitudAgregar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ===================================================== -->
+        <!-- TABS -->
+        <!-- ===================================================== -->
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/activitySolicitudAgregarTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solicitud" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Análisis" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+        <!-- ===================================================== -->
+        <!-- CONTENEDOR DE LOS TABS -->
+        <!-- ===================================================== -->
+
+        <LinearLayout
+            android:id="@+id/activitySolicitudContenedorTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- ================================================= -->
+            <!-- TAB SOLICITUD -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:id="@+id/activitySolicitudAgregarTabSolicitud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                tools:visibility="visible">
+
+
+                <!-- ===================================================== -->
+                <!-- SOLICITUD + ZAFRA + FECHA -->
+                <!-- ===================================================== -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <!-- SOLICITUD -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Solicitud"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/activitySolicitudAgregarSolicitud"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:hint="0"
+                            android:inputType="none" />
+
+                    </LinearLayout>
+
+
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content" />
+
+
+                    <!-- ZAFRA -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Zafra"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/activitySolicitudAgregarZafra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:hint="Zafra"
+                            android:inputType="none" />
+
+                    </LinearLayout>
+
+
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content" />
+
+
+                    <!-- FECHA -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fecha"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/activitySolicitudAgregarFecha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:hint="dd/MM/yyyy"
+                            android:inputType="none" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- ===================================================== -->
+                <!-- TIPO SOLICITUD -->
+                <!-- ===================================================== -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo solicitud"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/activitySolicitudAgregarTipoSolicitud"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="Tipo solicitud"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+
+                <!-- ===================================================== -->
+                <!-- PRODUCTO PRODUCCION + NOMBRE -->
+                <!-- ===================================================== -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Producto producción"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- CODIGO PRODUCTO PRODUCCION -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/activitySolicitudAgregarProductoProduccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:hint="Código"
+                            android:inputType="none" />
+
+                    </LinearLayout>
+
+
+                    <!-- NOMBRE PRODUCTO PRODUCCION -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/activitySolicitudAgregarProductoProduccionNombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:hint="Nombre producto producción"
+                            android:inputType="none" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- ===================================================== -->
+                <!-- PRODUCTO LABORATORIO + NOMBRE -->
+                <!-- ===================================================== -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Producto laboratorio"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- CODIGO PRODUCTO LABORATORIO -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/activitySolicitudAgregarProductoLaboratorio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:hint="Código"
+                            android:inputType="none" />
+
+                    </LinearLayout>
+
+
+                    <!-- NOMBRE PRODUCTO LABORATORIO -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/activitySolicitudAgregarProductoLaboratorioNombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:hint="Nombre producto laboratorio"
+                            android:inputType="none" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- ===================================================== -->
+                <!-- OBSERVACIONES -->
+                <!-- ===================================================== -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Observaciones"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/activitySolicitudAgregarObservaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:hint="Observaciones"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="2" />
+
+
+                <!-- ===================================================== -->
+                <!-- OBSERVACION APROBACION -->
+                <!-- ===================================================== -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Observación aprobación"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/activitySolicitudAgregarObservacionAprobacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:hint="Observación aprobación"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="2" />
+
+
+                <!-- ===================================================== -->
+                <!-- OBSERVACION ANULACION -->
+                <!-- ===================================================== -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Observación anulación"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/activitySolicitudAgregarObservacionAnulacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:hint="Observación anulación"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="2" />
+
+            </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- TAB ANALISIS -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:id="@+id/activitySolicitudAgregarTabAnalisis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="gone">
+
+                <TextView
+                    android:id="@+id/toma"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Toma"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
